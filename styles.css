@@ -1,18 +1,67 @@
+html{
+	height: 100%;
+}
+
 body{
 	display: flex;
+	flex-direction:row;
+	font-family: 'Poppins', sans-serif;
+	color: white;
+	text-align: center;
+	background: linear-gradient(#134d71,#78a7c6,#f7e4bf);
+	background-repeat: no-repeat;
 }
 
-section{
+section {
 	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content:flex-start;
 }
 
-.choose{
+header{
+	font-size: 5vw;
+	font-weight: 700;
+}
+
+p{
+	font-size: 2vw;
+	margin-block: 0;
+}
+
+h3{
+	font-size: 1.5vw;
+	margin-block: 0;
+}
+.main-game{
 	width: 70%;
+
+}
+.game-type{
+	border: 2px solid red;
 	display: flex;
+	flex-direction: row;
 	align-items: center;
-	justify-content:center;
+	justify-content: space-around;
 }
 
 .player{
 	width: 15%;
+	border: 3px solid green;
+}
+
+.choose-hand{
+	margin: 20px;
+	width: 20%;
+	transition: all .2s ease-in-out;
+}
+
+.hidden {
+	display: none;
+	border: 10px solid blue;
+}
+
+.choose-hand:hover{
+	transform: scale(1.1);
 }
