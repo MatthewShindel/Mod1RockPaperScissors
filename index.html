@@ -15,27 +15,50 @@
 <body>
 
 	<section class="player" id="player1">
-		<p>👦</p>
+		<h3>👦</h3>
 		<h3>Player 1</h3>
 		<p>Wins : 0</p>
+		<button type="button" class="hidden" id="change-game">Change Game</button>
 	</section>
 
 	<section class="main-game">
 		<header>Rock, Paper, Scissors</header>
+		
+		<div class="choose-game" id="classic-game">
+			<h3>Classic</h3>
+			<p>🪨 beats ✂️</p>
+			<p>✂️ beats 📄</p>
+			<p>📄 beats 🪨</p>
+		</div>
 
-		<div class="game-type" id="three-choice">
+		<div class="choose-game" id="advanced-game">
+			<h3>Challenge Mode</h3>
+			<p>🪨 beats ✂️ and 🦎</p>
+			<p>✂️ beats 📄 and 🦎</p>
+			<p>📄 beats 🪨 and 👽</p>
+			<p>👽 beats 🪨 and ✂️</p>
+			<p>🦎 beats 👽 and 📄</p>
+		</div>
+		
+
+		<div class="game-type hidden" id="three-choice">
 			<input type="image" class="choose-hand" id="rock" src="assets/happy-rocks.png" alt="">
 			<input type="image" class="choose-hand" id="paper" src="assets/happy-paper.png" alt="">
 			<input type="image" class="choose-hand" id="scissors" src="assets/happy-scissors.png" alt="">
 
 		</div>
-		<div class="game-type hidden" id="five=choice">
+		<div class="game-type hidden" id="five-choice">
+			<input type="image" class="choose-hand" id="rock" src="assets/happy-rocks.png" alt="">
+			<input type="image" class="choose-hand" id="paper" src="assets/happy-paper.png" alt="">
+			<input type="image" class="choose-hand" id="scissors" src="assets/happy-scissors.png" alt="">
+			<input type="image" class="choose-hand" id="alien" src="assets/happy-alien.png" alt="">
+			<input type="image" class="choose-hand" id="lizard" src="assets/lizard-cute.png" alt="">
 
 		</div>
 	</section>
 
 	<section class="player" id="player2">
-		<p>🖥️</p>
+		<h3>🖥️</h3>
 		<h3>Computer</h3>
 		<p>Wins : 0</p>
 	</section>
