@@ -22,7 +22,7 @@ for (let i = 0; i < chooseHand.length; i++) {
 		// testButton();
 		// console.log(human);
 		human.choice = event.currentTarget.value;
-		console.log(human.choice);
+		// console.log(human.choice);
 		computerChoice();
 		checkWinner();
 	})
@@ -45,7 +45,7 @@ changeGame.addEventListener('click', function(){
 
 
 function testButton(){
-	console.log(`Button ${event.currentTarget.value} is pressed`);
+	// console.log(`Button ${event.currentTarget.value} is pressed`);
 }
 
 
@@ -93,12 +93,12 @@ function computerChoice() {
 		}else if (randomNum === 5){
 			computer.choice = "lizard"
 		}
-	console.log(computer.choice, randomNum);
+	// console.log(computer.choice, randomNum);
 }
 
 function checkWinner() {
 	if (human.choice === computer.choice) {
-		console.log("draw");
+		console.log("Draw");
 	}else if((human.choice === 'rock') && (computer.choice === 'scissors' || computer.choice === 'lizard')){
 		console.log('Winner!')
 		addWins(human);
@@ -118,9 +118,22 @@ function checkWinner() {
 		console.log('Loser');
 		addWins(computer);
 	}
+
+	//render resutls screen, use .innerHTML to add images,
+	// after 1 second wait, set innerHTML to ""
+
 }
 
 function addWins(player) {
 	player.wins += 1;
-	console.log(player.name, player.wins);
+	// console.log(player.name, player.wins);
+	if(player.isPlayer){
+		playerWins.innerText = `Wins : ${player.wins}`
+	}else if(!player.isPlayer){
+		computerWins.innerText = `Wins : ${player.wins}`
+	}
+}
+
+function renderResults(){
+
 }
