@@ -17,12 +17,13 @@
 	<section class="player" id="player1">
 		<h3>👦</h3>
 		<h3>Player 1</h3>
-		<p>Wins : 0</p>
+		<p id="player-wins">Wins : 0</p>
 		<button type="button" class="hidden" id="change-game">Change Game</button>
 	</section>
 
 	<section class="main-game">
 		<header>Rock, Paper, Scissors</header>
+		<h3 id="result-text"></h3>
 		
 		<div class="choose-game" id="classic-game">
 			<h3>Classic</h3>
@@ -42,25 +43,31 @@
 		
 
 		<div class="game-type hidden" id="three-choice">
-			<input type="image" class="choose-hand" id="rock" src="assets/happy-rocks.png" alt="">
-			<input type="image" class="choose-hand" id="paper" src="assets/happy-paper.png" alt="">
-			<input type="image" class="choose-hand" id="scissors" src="assets/happy-scissors.png" alt="">
+			<input type="image" class="choose-hand" id="rock" src="assets/happy-rocks.png" value="rock" alt="Rock">
+			<input type="image" class="choose-hand" id="paper" src="assets/happy-paper.png" value="paper" alt="Paper">
+			<input type="image" class="choose-hand" id="scissors" src="assets/happy-scissors.png" value="scissors" alt="Scissors">
 
 		</div>
 		<div class="game-type hidden" id="five-choice">
-			<input type="image" class="choose-hand" id="rock" src="assets/happy-rocks.png" alt="">
-			<input type="image" class="choose-hand" id="paper" src="assets/happy-paper.png" alt="">
-			<input type="image" class="choose-hand" id="scissors" src="assets/happy-scissors.png" alt="">
-			<input type="image" class="choose-hand" id="alien" src="assets/happy-alien.png" alt="">
-			<input type="image" class="choose-hand" id="lizard" src="assets/lizard-cute.png" alt="">
+			<input type="image" class="choose-hand" id="rock" src="assets/happy-rocks.png" value="rock" alt="Rock">
+			<input type="image" class="choose-hand" id="paper" src="assets/happy-paper.png" value="paper" alt="Paper">
+			<input type="image" class="choose-hand" id="scissors" src="assets/happy-scissors.png" value="scissors" alt="Scissors">
+			<input type="image" class="choose-hand" id="alien" src="assets/happy-alien.png" value="alien" alt="Alien">
+			<input type="image" class="choose-hand" id="lizard" src="assets/lizard-cute.png" value="lizard" alt="Lizard">
 
 		</div>
+
+		<div class="result-screen hidden" >
+			<img class="result-image" id="player-input" src="" alt="">
+			<img class="result-image" id="computer-input" src="" alt="">
+		</div>
+
 	</section>
 
 	<section class="player" id="player2">
 		<h3>🖥️</h3>
 		<h3>Computer</h3>
-		<p>Wins : 0</p>
+		<p id="computer-wins">Wins : 0</p>
 	</section>
 	<script src="main.js"></script>
 </body>
